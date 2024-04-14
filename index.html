@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to the Tax Calculator</h1>
+    <form id="taxForm">
+        <label for="age">Age:</label>
+        <select id="age">
+            <option value="">Select Age</option>
+            <option value="<40">&lt;40</option>
+            <option value="≥40 & <60">≥40 &lt;60</option>
+            <option value="≥60">≥60</option>
+        </select><br>
+        <label for="grossIncome" >Gross Annual Income:</label>
+        <input type="number" id="grossIncome"><br>
+        <label for="extraIncome">Extra Income:</label>
+        <input type="number" id="extraIncome"><br>
+        <label for="deductions">Deductions:</label>
+        <input type="number" id="deductions"><br>
+        <button type="submit">Calculate Tax</button>
+    </form>
+    <div id="errorIcons">
+        <!-- Error icons will be appended here -->
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="taxAmount"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
